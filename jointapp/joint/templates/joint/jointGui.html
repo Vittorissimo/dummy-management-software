@@ -1,31 +1,23 @@
+<!doctype html>
 <html>
     <head>
         <h1>Hello test</h1> 
     </head>
     <body>
-        <h4> Update Base (number between 0-360) </h4>
-        <input type="text" name="base">
-        <button type="button"> Enter </button>
-        <br>
-
-        <h4> Update Shoulder (number between 0-360) </h4>
-        <input type="text" name="shoulder">
-        <button type="button"> Enter </button>
-        <br>
-        
-        <h4> Update Elbow (number between 0-360) </h4>
-        <input type="text" name="elbow">
-        <button type="button"> Enter </button>
-        <br>
-        
-        <h4> Update Wrist (number between 0-360) </h4>
-        <input type="text" name="wrist">
-        <button type="button"> Enter </button>
-        <br>
-        
-        <h4> Update Gripper (number between 0-75) </h4>
-        <input type="text" name="gripper">
-        <button type="button"> Enter </button>
-        <br>
+        <div class="container">
+            <div class="row">
+                {% for joint in joints %}
+                <p>------------------------------------------------</p  >
+                <div class="col-sm">
+                    <div class="piece" style="width: 18rem">
+                        <div class="piece-body">
+                            <h5 class="piece-title"> {{joint.name}} </h5>
+                            <p class="piece-text"> degree: {{joint.degree}} </p>
+                            <a href="#" class="btn btn-primary "> update </a>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </body>
 </html>

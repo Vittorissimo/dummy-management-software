@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Joint
 
 # Create your views here.
 def joint(request):
-    return render(request, 'joint/jointGui.html')    
+    joints = Joint.objects.all()
+    return render(request, 'joint/jointGui.html', {'joints': joints})    
