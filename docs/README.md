@@ -117,7 +117,7 @@ urlpatterns = [
 
 path é la funzione che associa un URL a una view e ha i seguenti parametri: route	La stringa dell'URL da intercettare, view	La funzione/classe view da chiamare, kwargs	Argomenti extra da passare alla view (opzionale), name	Nome univoco dell'URL, usato nei template con {% url %} (opzionale)
 
-### PASSO 13: urls
+### PASSO 14: urls
 aprire urls su nomeapp e inserire sotto alla riga del path di admin mettere:
 
 ```
@@ -133,6 +133,7 @@ from django.urls import path, include
 ### Riepilogo di comandi + comandi utili
 comandi con manage.py
 
+```
 python manage.py runserver          # Avvia server di sviluppo
 python manage.py startapp nomeapp   # Crea nuova app
 python manage.py makemigrations     # Genera migrazioni
@@ -143,8 +144,9 @@ python manage.py test               # Esegue i test
 python manage.py collectstatic      # Raccoglie i file statici (produzione)
 python manage.py showmigrations     # Lista stato migrazioni
 python manage.py dbshell            # Shell SQL diretta al database
+```
 
-
+```
 Tipi di campo più comuni:
 
 Campo	        Utilizzo
@@ -159,8 +161,9 @@ ForeignKey	    Relazione molti-a-uno
 ManyToManyField	Relazione molti-a-molti
 ImageField	    Upload immagini
 FileField	    Upload file generici
+```
 
-
+```
 Sintassi template Django:
 
 Sintassi	                Significato
@@ -171,3 +174,4 @@ Sintassi	                Significato
 {% extends 'base.html' %}	Eredita un template
 {% block contenuto %}	    Definisce un blocco
 {% static 'file.css' %}	    File statici
+```
