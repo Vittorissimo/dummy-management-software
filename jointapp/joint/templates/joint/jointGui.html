@@ -13,7 +13,13 @@
                         <div class="piece-body">
                             <h5 class="piece-title"> {{joint.name}} </h5>
                             <p class="piece-text"> degree: {{joint.degree}} </p>
-                            <a href="#" class="btn btn-primary "> update </a>
+                            <form method="POST" action="{% url 'change_joint' joint.id %}">
+                                {% csrf_token %}
+                        
+                                <input type="number" name="new_angle" value="{{ joint.degree }}">
+                        
+                                <button type="submit"> Change </button>
+                            </form>
                         </div>
                 </div>
                 {% endfor %}
